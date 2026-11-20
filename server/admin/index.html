@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>KJ Wear অ্যাডমিন</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="box">
+    <h1>KJ Wear অ্যাডমিন</h1>
+    <label for="lu">ইউজারনেম</label><input id="lu" autocomplete="username" required>
+    <label for="lp">পাসওয়ার্ড</label><input id="lp" type="password" autocomplete="current-password" required>
+    <p class="err" id="lerr" role="alert"></p>
+    <button class="btn">লগইন</button>
+  </form>
+</div>
+<div id="app" hidden>
+  <header><strong>KJ Wear</strong>
+    <nav><button data-tab="orders" class="on">অর্ডার</button><button data-tab="products">পণ্য</button></nav>
+    <span class="grow"></span><a href="/" target="_blank" rel="noopener">সাইট দেখুন</a><button id="logout" class="link">লগআউট</button></header>
+  <main id="view"></main>
+</div>
+<div id="modal" class="modal" hidden></div>
+<div id="toast" class="toast" role="status"></div>
+<script src="admin.js"></script>
+</body>
+</html>

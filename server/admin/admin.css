@@ -1,0 +1,33 @@
+:root{--p:#6B1F45;--bg:#F7F1E5;--card:#FCF9F2;--line:#E0D3BC;--text:#2A1620;--mut:#6E5A63;--ok:#2F6B4F;--err:#A3262E;--gold:#B8914F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 "Hind Siliguri",system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:.55rem .7rem;border:1px solid var(--line);border-radius:4px;background:#fff;min-height:42px}
+label{display:block;font-size:.85rem;color:var(--mut);margin:.7rem 0 .2rem}
+.btn{background:var(--p);color:#fff;border:0;border-radius:4px;padding:.6rem 1.1rem;cursor:pointer;min-height:42px}
+.btn.ghost{background:transparent;color:var(--p);border:1px solid var(--p)} .btn.sm{padding:.3rem .7rem;min-height:34px;font-size:.85rem} .btn.danger{background:var(--err)}
+.link{background:none;border:0;color:var(--p);text-decoration:underline;cursor:pointer;padding:.4rem}
+.login[hidden],.modal[hidden]{display:none}
+.login{min-height:100vh;display:grid;place-items:center;padding:16px} .box{background:var(--card);border:1px solid var(--line);padding:1.6rem;width:min(380px,100%)} .box h1{font-size:1.3rem;margin:0 0 .6rem;color:var(--p)} .box .btn{width:100%;margin-top:1rem}
+.err{color:var(--err);min-height:1.4em;margin:.5rem 0 0}
+header{display:flex;align-items:center;gap:1rem;padding:.7rem 1rem;background:var(--p);color:#fff;flex-wrap:wrap} header a{color:#F7E7C6}
+header nav{display:flex;gap:.3rem} header nav button{background:transparent;border:0;color:#fff;padding:.4rem .9rem;border-radius:20px;cursor:pointer;opacity:.8} header nav button.on{background:rgba(255,255,255,.18);opacity:1} header .link{color:#fff}
+.grow{flex:1}
+main{max-width:1180px;margin:0 auto;padding:1rem}
+.bar{display:flex;gap:.6rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap} .bar h2{margin:0;font-size:1.2rem;flex:1}
+.bar select{width:auto}
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}
+.tbl th,.tbl td{padding:.55rem .7rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} .tbl th{font-size:.8rem;color:var(--mut);background:#F1E9D8}
+.wrapx{overflow-x:auto}
+.pill{display:inline-block;padding:.05rem .6rem;border-radius:20px;font-size:.78rem;background:#EFE6D3} .pill.paid{background:#D9EBDD;color:var(--ok)} .pill.bad{background:#F4D9DB;color:var(--err)} .pill.warn{background:#F8E8C6;color:#7A5A12}
+.thumb{width:44px;height:55px;object-fit:cover;background:#E5D9C2;display:block}
+.detail td{background:#FBF7EE} .detail ul{margin:.2rem 0;padding-left:1.1rem}
+.modal{position:fixed;inset:0;background:rgba(42,22,32,.5);display:grid;place-items:start center;overflow:auto;padding:16px;z-index:10} .modal[hidden]{display:none}
+.mcard{background:var(--card);width:min(720px,100%);padding:1.3rem;margin:auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 .8rem} .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .8rem}
+.chk{display:flex;gap:1rem;flex-wrap:wrap;margin:.7rem 0} .chk label{display:flex;gap:.4rem;align-items:center;margin:0;color:var(--text)} .chk input{width:auto;min-height:0}
+.color{border:1px solid var(--line);padding:.8rem;margin:.6rem 0;background:#fff}
+.imgs{display:flex;gap:.4rem;flex-wrap:wrap;margin:.4rem 0} .imgs div{position:relative} .imgs img{width:56px;height:70px;object-fit:cover;display:block} .imgs button{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;border:0;background:var(--err);color:#fff;cursor:pointer;line-height:1}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--text);color:#fff;padding:.6rem 1.1rem;border-radius:30px;opacity:0;pointer-events:none;transition:opacity .3s} .toast.show{opacity:1}
+.muted{color:var(--mut)} .small{font-size:.82rem}
+@media(max-width:640px){.two,.three{grid-template-columns:1fr}}
